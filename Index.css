@@ -1,0 +1,890 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* UNIVERSAL */
+
+body{
+    font-family: 'Poppins', sans-serif;;
+}
+
+.content{
+    /* background-color: aqua; */
+    width: 85%;
+    height: 100%;
+    margin: auto;
+}
+
+/* Heading */
+
+.header{
+    width: 100%;
+    height: 700px;
+}
+
+.headerbg{
+    background-image: url(Assests/homemade-smoothie-bowl-made-with-berries.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 700px;
+
+    position: absolute;
+    z-index: -1;
+
+    filter: brightness(30%) blur(1.3px);
+}
+
+.hdr_navbarbg{
+    width: 100%;
+    height: 85px;
+    background-color: black;
+
+    position: absolute;
+    z-index: -1;
+
+    opacity: 50%;
+}
+
+.hdr_navbar{
+    width: 100%;
+    height: 85px;
+    margin: auto;
+
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: "logo navigation button";
+    grid-template-columns: 1fr 2fr 1fr;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hdr_logo{
+    grid-area: logo;
+    background-image: url(Assests/foodienobg.png);
+    width: 40%;
+    height: 100%;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+.hdr_navigation{
+    grid-area: navigation;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hdr_navigation ul{
+    list-style-type: none;
+}
+
+.hdr_navigation li, a{
+    display: inline-block;
+    color: #cccccc;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0px 7px;
+    transition: 0.3s;
+}
+
+.hdr_navigation span{
+    color: white;
+}
+
+.hdr_navigation li, a:hover{
+    color: white;
+}
+
+.hdr_acc{
+    grid-area: button;
+    width: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.start{
+    background-color: #cc7e30;
+    width: 130px;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border: none;
+
+    transition: 0.25s;
+}
+
+.start:hover{
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.hdr_hero{
+    width: 100%;
+    height: 615px;
+
+    padding: 57.5px 0px;
+}
+
+.hdr_herogrid{
+    display: grid;
+    grid-template-areas: "heroimg herodesc";
+    grid-template-columns: 0.45fr 0.55fr;
+    height: 500px;
+    gap: 40px;
+}
+
+.hdr_heroimg{
+    grid-area: heroimg;
+
+    background-image: url(Assests/george-zheng-0Kbjfwunink-unsplash-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.hdr_heroblob{
+    background-image: url(Assests/blob-haikei.png);
+    background-position: center;
+    background-size: cover;
+
+    width: 600px;
+    height: 500px;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.hdr_herodesc{
+    grid-area: herodesc;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    line-height: 65px;
+}
+
+.hdr_herodesc h2{
+    font-size: 44px;
+}
+
+.hdr_herodesc h1{
+    font-size: 48px;
+}
+
+.hdr_herodesc p{
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #cccccc;
+}
+
+.hdr_ordernow{
+    background-color: #cc7e30;
+    width: 140px;
+    height: 45px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    margin-top: 30px;
+
+    transition: 0.25s;
+}
+
+.hdr_ordernow:hover{
+    opacity: 85%;
+    cursor: pointer;
+}
+
+/* ABOUT */
+
+.about{
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 850px;
+}
+
+.about .content{
+    display: flex;
+    align-items: center;
+}
+
+.abt_grid{
+    display: grid;
+    grid-template-areas: "aboutdesc aboutimg";
+    grid-template-columns: 1fr 0.3fr;
+    gap: 57px;
+
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.abt_desc{
+    grid-area: aboutdesc;
+    height: 100%;
+    width: 100%;
+}
+
+.abt_desc h2{
+    font-size: 48px;
+}
+
+.abt_desc h1{
+    font-size: 56px;
+    margin-top: -20px;
+}
+
+.about p{
+    color: #afafaf;
+    font-size: 20px;
+    font-weight: 700;
+
+    margin: 5px 0px;
+}
+
+.abt_descflex{
+    display: flex;
+    gap: 20px;
+}
+
+.abt_descflex p{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.abt_button{
+    color: white;
+    background-color: #cc7e30;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    margin: 40px 0px 50px;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.abt_button:hover{
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.abt_food{
+    display: flex;
+    gap: 50px;
+}
+
+.abt_box, .abt_box0, .abt_box1, .abt_box2{
+    width: 150px;
+    height: 150px;
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.abt_box:hover, .abt_box0:hover, .abt_box1:hover, .abt_box2:hover{
+    filter: brightness(75%);
+    cursor: pointer;
+}
+
+.abt_box{
+    background-image: url('Assests/ca-creative-bpPTlXWTOvg-unsplash.jpg');
+}
+
+.abt_box0{
+    background-image: url('Assests/optional/anh-nguyen-kcA-c3f_3FE-unsplash.jpg');
+}
+
+.abt_box1{
+    background-image: url('Assests/optional/george-zheng-0Kbjfwunink-unsplash.jpg');
+}
+
+.abt_box2{
+    background-image: url('Assests/optional/anna-pelzer-IGfIGP5ONV0-unsplash.jpg');
+}
+
+.abt_price{
+    background-color: #cc7e30;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+
+    position: relative;
+    left: 85px;
+    top: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abt_img{
+    grid-area: aboutimg;
+
+    background-image: url(Assests/optional/farhad-ibrahimzade-LJ49dflDcH8-unsplash.jpg);
+    width: 420px;
+    height: 620px;
+    border-radius: 20px;
+    filter: brightness(85%);
+
+    background-size: cover;
+    background-position-x: center;
+}
+
+/* Work */
+
+.work{
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    height: 1750px;
+
+    text-align: center;
+}
+
+.work .content{
+    padding: 150px 0px;
+}
+
+.work h1{
+    font-size: 48px;
+}
+
+.work_grid{
+    display: grid;
+    grid-template-areas: "work0 work1 work2 work3";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px;
+
+    margin-top: 80px;
+}
+
+.work_grid p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #757474;
+}
+
+.work_grid h2{
+    font-weight: 600;
+    font-size: 28px;
+    margin: 15px 0px 5px;
+}
+
+.work_box{
+    grid-area: work0;
+}
+
+.work_box0{
+    grid-area: work1;
+}
+
+.work_box1{
+    grid-area: work2;
+}
+
+.work_box2{
+    grid-area: work3;
+}
+
+.work_icon{
+    font-size: 48px;
+    color: #cc7e30;
+}
+
+.work hr{
+    background-color: #cc7e30;
+    width: 15%;
+    height: 8px;
+    border: none;
+    margin: 150px auto;
+}
+
+.work_grid0{
+    display: grid;
+    grid-template-areas: "work3 work5 work5"
+                         "work4 work6 work6";
+    gap: 20px;
+}
+
+.work_box3, .work_box4, .work_box5, .work_box6{
+    border-radius: 5px;
+    color: white;
+
+    transition: 0.3s;
+}
+
+.work_box3:hover, .work_box4:hover, .work_box5:hover, .work_box6:hover{
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.work_box3{
+    background-image: url(Assests/marina_dark.jpg);
+    background-size: cover;
+    background-position: center;
+
+    grid-area: work3;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    line-height: 32px;
+}
+
+.work_box4{
+    background-image: url(Assests/monika_dark.jpg);
+    background-size: cover;
+    background-position: center;
+
+    grid-area: work4;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.work_box5{
+    background-image: url(Assests/optional/ryan_dark.jpg);
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: -50px;
+
+    grid-area: work5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.work_box6{
+    background-image: url(Assests/menu/sebastian_dark.jpg);
+    background-size: cover;
+    background-position: center;
+
+    grid-area: work6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.work_text0{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.work_grid0 h3{
+    margin: 0px 0px 20px;
+}
+
+.work_box4 ul{
+    list-style-type: none;
+    line-height: 30px;
+}
+
+.days{
+    text-align: start;
+}
+
+.hour{
+    text-align: end;
+}
+
+.work_box5 h2, .work_box6 h2{
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.work_box5 h1, .work_box6 h1{
+    font-size: 52px;
+}
+
+.work_box5 p, .work_box6 p{
+    margin-top: 25px;
+    font-size: 14px;
+    text-decoration: underline;
+
+    transition: 0.3s;
+}
+
+.work_box5 p:hover, .work_box6 p:hover{
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Menu */
+
+.menu{
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 1000px;
+}
+
+.menu .content{
+    padding: 90px 0px;
+}
+
+.mn_icon{
+    text-align: center;
+    font-size: 40px;
+    color: #cc7e30;
+}
+
+.menu h2{
+    text-align: center;
+    font-size: 40px;
+
+    margin: 20px 0px 50px;
+}
+
+.menu hr{
+    background-color: #cc7e30;
+    height: 7px;
+}
+
+.mn_grid{
+    margin: auto;
+    display: grid;
+    grid-template-areas: "fd fd0"
+                         "fd1 fd2"
+                         "fd3 fd4";
+    gap: 50px
+}
+
+.mn_food, .mn_food0, .mn_food1, .mn_food2, .mn_food3, .mn_food4{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.mn_img{
+    background-image: url(Assests/ca-creative-bpPTlXWTOvg-unsplash.jpg);
+    height: 100%;
+    width: 130px;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 7px;
+    filter: brightness(80%);
+}
+
+.mn_img1{
+    background-image: url(Assests/christina-rumpf-gUU4MF87Ipw-unsplash.jpg);
+    height: 100%;
+    width: 130px;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 7px;
+    filter: brightness(80%);
+}
+
+.mn_img2{
+    background-image: url(Assests/menu/louis-hansel-cdR6i9i4jwI-unsplash.jpg);
+    height: 100%;
+    width: 130px;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 7px;
+    filter: brightness(80%);
+}
+
+.mn_img3{
+    background-image: url(Assests/optional/anna-pelzer-IGfIGP5ONV0-unsplash.jpg);
+    height: 100%;
+    width: 130px;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 7px;
+    filter: brightness(80%);
+}
+
+.mn_img4{
+    background-image: url(Assests/menu/ella-olsson-KPDbRyFOTnE-unsplash.jpg);
+    height: 100%;
+    width: 130px;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 7px;
+    filter: brightness(80%);
+}
+
+.mn_img5{
+    background-image: url(Assests/optional/tania-melnyczuk-xeTv9N2FjXA-unsplash.jpg);
+    height: 100%;
+    width: 130px;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 7px;
+    filter: brightness(80%);
+}
+
+.mn_img4:hover{
+    background-image: url(Assests/optional/ella-olsson-C1Q3qOTlegg-unsplash.jpg);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mn_food{
+    grid-area: fd;
+}
+
+.mn_food0{
+    grid-area: fd0;
+}
+
+.mn_food1{
+    grid-area: fd1;
+}
+
+.mn_food2{
+    grid-area: fd2;
+}
+
+.mn_food3{
+    grid-area: fd3;
+}
+
+.mn_food4{
+    grid-area: fd4;
+}
+
+.mn_foodflex{
+    display: flex;
+
+    gap: 50px;
+}
+
+.mn_button{
+    display: flex;
+    justify-content: center;
+}
+
+.seemore{
+    color: white;
+    background-color: #cc7e30;
+    width: 140px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    margin: 80px 0px 90px;
+    font-size: 18px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.seemore:hover{
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.foodname{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.star{
+    color: #cc7e30;
+}
+
+.mn_foodflex p{
+    font-size: 14px;
+}
+
+.mn_price{
+    background-color: #cc7e30;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Contact */
+
+.contact{
+    background-image: url(Assests/homemade_dark.jpg);
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    height: 125px;
+}
+
+.con_con{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    gap:35px;
+
+    color: white;
+    font-size: 16.1px;
+}
+
+.con_icon{
+    font-size: 52px;
+}
+
+.contact .abt_button{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 800px;
+}
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    height: 400px;
+
+    color: white;
+}
+
+.ftr_bg{
+    background-image: url(Assests/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg);
+    background-size: cover;
+    background-position-y: -350px;
+
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 400px;
+    filter: brightness(40%) blur(1px);
+}
+
+.ftr_grid{
+    height: 100%;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: "ftr ftr0 ftr1";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 175px;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ftr_box, .ftr_box0, .ftr_box1{
+    width: 100%;
+}
+
+.ftr_icon{
+    font-size: 25px;
+    margin: 0px 2.5px;
+
+    transition: 0.3s;
+}
+
+.ftr_icon:hover{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.ftr_box h3{
+    margin: 10px 0px;
+}
+
+.ftr_box0 .ftr_logo{
+    margin-bottom: 25px;
+}
+
+.ftr_grid ul{
+    list-style-type: none;
+}
+
+.ftr_box li{
+    display: inline;
+}
+
+.ftr_logo{
+    background-image: url(Assests/foodienobg.png);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+
+    width: 250px;
+    height: 110px;
+}
+
+.ftr_box1 li:hover{
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Copyright */
+
+.copyright{
+    width: 100%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #898989;
+
+    text-align: center;
+    padding: 7px 0px;
+}
